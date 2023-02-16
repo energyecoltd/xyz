@@ -8,5 +8,6 @@ document.getElementById('waracc').value = localStorage.getItem('wa');
 } else {
 document.getElementById('warbank').value += wb;
 document.getElementById('waracc').value += wa;
+localStorage.setItem('wdeets','saved');
 }
 });
