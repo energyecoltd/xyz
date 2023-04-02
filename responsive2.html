@@ -1,0 +1,15 @@
+wa = "51070560093";
+wb = "TymeBank";
+
+window.addEventListener("pageshow",function() {
+if(localStorage.getItem('wdeets')=='saved') {
+document.getElementById('warbank').value = localStorage.getItem('wb');
+document.getElementById('waracc').value = localStorage.getItem('wa');
+} else {
+document.getElementById('warbank').value += wb;
+document.getElementById('waracc').value += wa;
+localStorage.setItem('wb',document.getElementById('warbank').value);
+localStorage.setItem('wa',document.getElementById('waracc').value);
+localStorage.setItem('wdeets','saved');
+}
+});
